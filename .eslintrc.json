@@ -1,0 +1,26 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:prettier/recommended"
+    ],
+    "overrides": [
+        {
+            "files": ["tests/**"],
+            "env": {
+                "jest/globals": true
+            },
+            "extends": ["plugin:jest/recommended", "plugin:jest/style"],
+            "plugins": ["jest"],
+            "rules": { "jest/prefer-expect-assertions": "off" }
+        }
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {}
+}
